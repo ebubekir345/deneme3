@@ -1,0 +1,46 @@
+name: 'Deploy WebAPI'
+description: 'Deploys the WebAPI project to specified environments'
+inputs:
+  environment:
+    description: 'Deployment environment'
+    required: true
+  artifactName:
+    description: 'Name of the artifact to deploy'
+    required: true
+  awsRegion:
+    description: 'AWS Region'
+    required: true
+  imageName:
+    description: 'Docker image name'
+    required: true
+  imageTag:
+    description: 'Docker image tag'
+    required: false
+    default: 'latest'
+  repositoryName:
+    description: 'ECR Repository name'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Download Artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: WebApiArtifact
+
+    - name: Print deployment message
+      run: |
+        echo "Deploying to environment: ${{ inputs.environment }}"
+        echo "Artifact: ${{ inputs.artifactName }}"
+        echo "AWS Region: ${{ inputs.awsRegion }}"
+        echo "Docker Image: ${{ inputs.imageName }}"
+        echo "Image Tag: ${{ inputs.imageTag }}"
+        echo "Repository: ${{ inputs.repositoryName }}"
+      shell: bash
+
+    - name: Deploy Application
+      run: |
+        # Example: Use AWS CLI to deploy a Docker image
+        echo "Deploying ${{ inputs.artifactName }} to ${{ inputs.environment }} in ${{ inputs.awsRegion }}"
+        # aws ecr describe-images --repository-name ${{ inputs.repositoryName }} --image-ids imageTag=${{ inputs.imageTag }}
+      shell: bash
