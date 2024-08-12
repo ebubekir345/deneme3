@@ -1,4 +1,4 @@
-name: Test WebAPI Pipeline
+name: Test-Main
 
 on:
   workflow_dispatch:
@@ -34,112 +34,13 @@ on:
         default: true
 
 jobs:
-  build-and-setup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+  run-webapi-action:
+    uses: ./.github/actions/test/webapi/action.yml
+    with:
+      artifactName: ${{ inputs.artifactName }}
+      deployToInt: ${{ inputs.deployToInt }}
+      deployToTest: ${{ inputs.deployToTest }}
+      deployToTest01: ${{ inputs.deployToTest01 }}
+      deployToTest02: ${{ inputs.deployToTest02 }}
+      deployToAutomation: ${{ inputs.deployToAutomation }}
 
-      - name: Get Variables
-        id: variables
-        uses: ./.github/actions/Templates/variables/webapi
-
-          
-      - name: Build WebApi
-        uses: ./.github/actions/Templates/build/webapi
-          
-    outputs:
-      artifactName: ${{ steps.variables.outputs.ARTIFACT_NAME }}
-      awsRegion: ${{ steps.variables.outputs.AWS_REGION }}
-      imageName: ${{ steps.variables.outputs.IMAGE_NAME }}
-      repositoryName: ${{ steps.variables.outputs.REPOSITORY_NAME }}
-
-  deploy-int:
-    needs: build-and-setup
-    if: ${{ inputs.deployToInt }} # Only runs if deployToInt is true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to Int
-        uses: ./.github/actions/Templates/deploy/webapi
-        with:
-          environment: 'int'
-          artifactName: ${{ needs.build-and-setup.outputs.artifactName }}
-          awsRegion: ${{ needs.build-and-setup.outputs.awsRegion }}
-          imageName: ${{ needs.build-and-setup.outputs.imageName }}
-          imageTag: 'latest' # or another tag
-          repositoryName: ${{ needs.build-and-setup.outputs.repositoryName }}
-
-  deploy-test:
-    needs: build-and-setup
-    if: ${{ inputs.deployToTest }} # Only runs if deployToTest is true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to Test
-        uses: ./.github/actions/Templates/deploy/webapi
-        with:
-          environment: 'test'
-          artifactName: ${{ needs.build-and-setup.outputs.artifactName }}
-          awsRegion: ${{ needs.build-and-setup.outputs.awsRegion }}
-          imageName: ${{ needs.build-and-setup.outputs.imageName }}
-          imageTag: 'latest' # or another tag
-          repositoryName: ${{ needs.build-and-setup.outputs.repositoryName }}
-
-  deploy-test01:
-    needs: build-and-setup
-    if: ${{ inputs.deployToTest01 }} # Only runs if deployToTest01 is true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to Test01
-        uses: ./.github/actions/Templates/deploy/webapi
-        with:
-          environment: 'test01'
-          artifactName: ${{ needs.build-and-setup.outputs.artifactName }}
-          awsRegion: ${{ needs.build-and-setup.outputs.awsRegion }}
-          imageName: ${{ needs.build-and-setup.outputs.imageName }}
-          imageTag: 'latest' # or another tag
-          repositoryName: ${{ needs.build-and-setup.outputs.repositoryName }}
-
-  deploy-test02:
-    needs: build-and-setup
-    if: ${{ inputs.deployToTest02 }} # Only runs if deployToTest02 is true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to Test02
-        uses: ./.github/actions/Templates/deploy/webapi
-        with:
-          environment: 'test02'
-          artifactName: ${{ needs.build-and-setup.outputs.artifactName }}
-          awsRegion: ${{ needs.build-and-setup.outputs.awsRegion }}
-          imageName: ${{ needs.build-and-setup.outputs.imageName }}
-          imageTag: 'latest' # or another tag
-          repositoryName: ${{ needs.build-and-setup.outputs.repositoryName }}
-
-  deploy-automation:
-    needs: build-and-setup
-    if: ${{ inputs.deployToAutomation }} # Only runs if deployToAutomation is true
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Deploy to Automation
-        uses: ./.github/actions/Templates/deploy/webapi
-        with:
-          environment: 'automation'
-          artifactName: ${{ needs.build-and-setup.outputs.artifactName }}
-          awsRegion: ${{ needs.build-and-setup.outputs.awsRegion }}
-          imageName: ${{ needs.build-and-setup.outputs.imageName }}
-          imageTag: 'latest' # or another tag
-          repositoryName: ${{ needs.build-and-setup.outputs.repositoryName }}
