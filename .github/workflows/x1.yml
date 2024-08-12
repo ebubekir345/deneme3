@@ -41,7 +41,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run WebAPI Action
-        uses: ./.github/actions/test/webapi/action.yml
+        uses: ./.github/actions/test/webapi
         with:
           artifactName: ${{ inputs.artifactName }}
           deployToInt: ${{ inputs.deployToInt }}
