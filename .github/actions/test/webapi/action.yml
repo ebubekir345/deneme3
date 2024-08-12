@@ -1,34 +1,34 @@
 name: WebAPI Pipeline Template
 
-description: WebAPI'nin çeşitli ortamlara dağıtımı için genel bir şablon.
+description: A general template for deploying WebAPI to various environments.
 
 inputs:
   artifactName:
-    description: 'Artifaktın adı'
+    description: 'Name of the artifact'
     required: true
     type: string
   deployToInt:
-    description: 'Int ortamına dağıt'
+    description: 'Deploy to Int environment'
     required: true
     type: boolean
     default: true
   deployToTest:
-    description: 'Test ortamına dağıt'
+    description: 'Deploy to Test environment'
     required: true
     type: boolean
     default: true
   deployToTest01:
-    description: 'Test01 ortamına dağıt'
+    description: 'Deploy to Test01 environment'
     required: true
     type: boolean
     default: true
   deployToTest02:
-    description: 'Test02 ortamına dağıt'
+    description: 'Deploy to Test02 environment'
     required: true
     type: boolean
     default: true
   deployToAutomation:
-    description: 'Automation ortamına dağıt'
+    description: 'Deploy to Automation environment'
     required: true
     type: boolean
     default: true
@@ -36,17 +36,17 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Kodu Checkout Et
+    - name: Checkout Code
       uses: actions/checkout@v3
 
-    - name: Değişkenleri Al
+    - name: Get Variables
       id: variables
       uses: ./.github/actions/Templates/variables/webapi
 
-    - name: WebAPI'yi Derle
+    - name: Build WebAPI
       uses: ./.github/actions/Templates/build/webapi
 
-    - name: Int Ortamına Dağıtım
+    - name: Deploy to Int Environment
       if: ${{ inputs.deployToInt }}
       uses: ./.github/actions/Templates/deploy/webapi
       with:
@@ -56,7 +56,7 @@ runs:
         imageName: ${{ steps.variables.outputs.IMAGE_NAME }}
         repositoryName: ${{ steps.variables.outputs.REPOSITORY_NAME }}
 
-    - name: Test Ortamına Dağıtım
+    - name: Deploy to Test Environment
       if: ${{ inputs.deployToTest }}
       uses: ./.github/actions/Templates/deploy/webapi
       with:
@@ -66,7 +66,7 @@ runs:
         imageName: ${{ steps.variables.outputs.IMAGE_NAME }}
         repositoryName: ${{ steps.variables.outputs.REPOSITORY_NAME }}
 
-    - name: Test01 Ortamına Dağıtım
+    - name: Deploy to Test01 Environment
       if: ${{ inputs.deployToTest01 }}
       uses: ./.github/actions/Templates/deploy/webapi
       with:
@@ -76,7 +76,7 @@ runs:
         imageName: ${{ steps.variables.outputs.IMAGE_NAME }}
         repositoryName: ${{ steps.variables.outputs.REPOSITORY_NAME }}
 
-    - name: Test02 Ortamına Dağıtım
+    - name: Deploy to Test02 Environment
       if: ${{ inputs.deployToTest02 }}
       uses: ./.github/actions/Templates/deploy/webapi
       with:
@@ -86,7 +86,7 @@ runs:
         imageName: ${{ steps.variables.outputs.IMAGE_NAME }}
         repositoryName: ${{ steps.variables.outputs.REPOSITORY_NAME }}
 
-    - name: Automation Ortamına Dağıtım
+    - name: Deploy to Automation Environment
       if: ${{ inputs.deployToAutomation }}
       uses: ./.github/actions/Templates/deploy/webapi
       with:
