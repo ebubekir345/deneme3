@@ -1,4 +1,4 @@
-name: Test-Main
+name: Test WebAPI Workflow
 
 on:
   workflow_dispatch:
@@ -34,13 +34,20 @@ on:
         default: true
 
 jobs:
-  run-webapi-action:
-    uses: ./.github/actions/test/webapi/action.yml
-    with:
-      artifactName: ${{ inputs.artifactName }}
-      deployToInt: ${{ inputs.deployToInt }}
-      deployToTest: ${{ inputs.deployToTest }}
-      deployToTest01: ${{ inputs.deployToTest01 }}
-      deployToTest02: ${{ inputs.deployToTest02 }}
-      deployToAutomation: ${{ inputs.deployToAutomation }}
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run WebAPI Action
+        uses: ./.github/actions/test/webapi/action.yml
+        with:
+          artifactName: ${{ inputs.artifactName }}
+          deployToInt: ${{ inputs.deployToInt }}
+          deployToTest: ${{ inputs.deployToTest }}
+          deployToTest01: ${{ inputs.deployToTest01 }}
+          deployToTest02: ${{ inputs.deployToTest02 }}
+          deployToAutomation: ${{ inputs.deployToAutomation }}
+
 
