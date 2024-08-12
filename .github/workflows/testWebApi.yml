@@ -58,6 +58,7 @@ jobs:
     needs: build-and-setup
     if: ${{ inputs.deployToInt }} # Only runs if deployToInt is true
     runs-on: ubuntu-latest
+    environment: int-environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -76,6 +77,7 @@ jobs:
     needs: build-and-setup
     if: ${{ inputs.deployToTest }} # Only runs if deployToTest is true
     runs-on: ubuntu-latest
+    environment: int-environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -94,6 +96,7 @@ jobs:
     needs: build-and-setup
     if: ${{ inputs.deployToTest01 }} # Only runs if deployToTest01 is true
     runs-on: ubuntu-latest
+    environment: int-environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -112,6 +115,7 @@ jobs:
     needs: build-and-setup
     if: ${{ inputs.deployToTest02 }} # Only runs if deployToTest02 is true
     runs-on: ubuntu-latest
+    environment: int-environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -130,6 +134,7 @@ jobs:
     needs: build-and-setup
     if: ${{ inputs.deployToAutomation }} # Only runs if deployToAutomation is true
     runs-on: ubuntu-latest
+    environment: int-environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
