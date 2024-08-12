@@ -1,0 +1,42 @@
+name: 'Get Variables'
+description: 'Action to provide specific variables'
+inputs:
+  artifactName:
+    description: 'Name of the artifact'
+    required: true
+    default: 'Maestro.WebApi'
+  awsRegion:
+    description: 'AWS Region'
+    required: true
+    default: 'eu-west-1'
+  imageName:
+    description: 'Docker image name'
+    required: true
+    default: 'maestro-webapi'
+  repositoryName:
+    description: 'ECR Repository name'
+    required: true
+    default: 'maestro-common-prod-webapi-repository'
+outputs:
+  ARTIFACT_NAME:
+    description: 'Artifact name'
+    value: ${{ inputs.artifactName }}
+  AWS_REGION:
+    description: 'AWS Region'
+    value: ${{ inputs.awsRegion }}
+  IMAGE_NAME:
+    description: 'Docker image name'
+    value: ${{ inputs.imageName }}
+  REPOSITORY_NAME:
+    description: 'ECR Repository name'
+    value: ${{ inputs.repositoryName }}
+runs:
+  using: 'composite'
+  steps:
+    - name: Output Variables
+      run: |
+        echo "ARTIFACT_NAME=${{ inputs.artifactName }}" >> $GITHUB_ENV
+        echo "AWS_REGION=${{ inputs.awsRegion }}" >> $GITHUB_ENV
+        echo "IMAGE_NAME=${{ inputs.imageName }}" >> $GITHUB_ENV
+        echo "REPOSITORY_NAME=${{ inputs.repositoryName }}" >> $GITHUB_ENV
+      shell: bash
