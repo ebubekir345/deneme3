@@ -15,7 +15,7 @@ runs:
   steps:
     - name: Install Dependencies
       run: npm install --legacy-peer-deps
-      working-directory: src/webapp
+      working-directory: ./src/webapp
       shell: bash
 
     - name: Run Tests
