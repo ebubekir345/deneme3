@@ -18,8 +18,8 @@ runs:
     - name: Download Artifact
       uses: actions/download-artifact@v3
       with:
-        name: ${{ inputs.artifactName }}
-        path: ${{ github.workspace }}/artifact
+        name: 'webapp-build-artifact'
+        path: './artifact'
 
     - name: Unzip Artifact
       run: unzip ${{ github.workspace }}/artifact/*.zip -d ${{ github.workspace }}/unzipped
