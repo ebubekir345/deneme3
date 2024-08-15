@@ -1,0 +1,128 @@
+name: Test WebAPP Pipeline
+
+on:
+  workflow_dispatch: 
+    inputs:
+      artifactName:
+        description: 'Name of the artifact'
+        required: true
+        type: string
+      deployToInt:
+        description: 'Deploy to int'
+        required: true
+        type: boolean
+        default: true
+      deployToTest:
+        description: 'Deploy to test'
+        required: true
+        type: boolean
+        default: true
+      deployToTest01:
+        description: 'Deploy to test01'
+        required: true
+        type: boolean
+        default: true
+      deployToTest02:
+        description: 'Deploy to test02'
+        required: true
+        type: boolean
+        default: true
+      deployToAutomation:
+        description: 'Deploy to automation'
+        required: true
+        type: boolean
+        default: true
+
+
+jobs: 
+  build-and-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Get variables
+        id: variables
+        uses: ./.github/actions/Templates/variables/WebApp
+
+      - name: Build WebApp
+        uses: ./.github/actions/Templates/build/WebApp
+
+    outputs:
+      artifactName: ${{steps.variables.outputs.ARTIFACT_NAME}}
+
+
+  deploy-int:
+    needs: build-and-setup
+    if: ${{inputs.deployToInt}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Int
+        uses: ./.github/actions/Templates/deploy/WebApp
+        with: 
+          environment: 'test'
+          artifactName: ${{needs.build-and-setup.outputs.artifactName}}
+          deployPath: ${{inputs.deployToInt}}
+
+  deploy-test:
+    needs: build-and-setup
+    if: ${{inputs.deployToTest}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Test
+        uses: ./.github/actions/Templates/deploy/WebApp
+        with: 
+          environment: 'test'
+          artifactName: ${{needs.build-and-setup.outputs.artifactName}}
+          deployPath: ${{inputs.deployToTest}}
+
+  deploy-test01:
+    needs: build-and-setup
+    if: ${{inputs.deployToTest01}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Test01
+        uses: ./.github/actions/Templates/deploy/WebApp
+        with: 
+          environment: 'test'
+          artifactName: ${{needs.build-and-setup.outputs.artifactName}}
+          deployPath: ${{inputs.deployToTest01}}
+
+  deploy-test02:
+    needs: build-and-setup
+    if: ${{inputs.deployToTest02}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Test02
+        uses: ./.github/actions/Templates/deploy/WebApp
+        with: 
+          environment: 'test'
+          artifactName: ${{needs.build-and-setup.outputs.artifactName}}
+          deployPath: ${{inputs.deployToTest02}}
+
+  deploy-automation:
+    needs: build-and-setup
+    if: ${{inputs.deployToAutomation}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Deploy to Automation
+        uses: ./.github/actions/Templates/deploy/WebApp
+        with: 
+          environment: 'test'
+          artifactName: ${{needs.build-and-setup.outputs.artifactName}}
+          deployPath: ${{inputs.deployToAutomation}}

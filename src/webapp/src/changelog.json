@@ -1,0 +1,395 @@
+{
+  "changelog": [
+    {
+      "version": "2.22.0",
+      "title": "Maestro v2.22.0",
+      "date": "28.03.2022",
+      "content": [
+        "Maestronun sipariş için beklenen sevk tarihi bilgisini alabilmesi ve beklenen sevk tarihi bilgisi alınan siparişlerin teslimat türü bilgisinin WEB Depo Yönetim ekranlarında “Planlı Teslimat” olarak göserilmesi sağlandı.",
+        "Siparişler sayfasında siparişlerin eskiden yeniye doğru sıralanması sağlandı.",
+        "Siparişler sayfasından tarih filtresi kaldırıldı.",
+        "Sevk edilen siparişlerin “Siparişler” sayfasında “Sevkiyat” başlığı altında gösterilmemesi sağlandı.",
+        "Siparişler sayfasına “Cut-off” ve “Gecikmeli” filtresi eklendi.",
+        "Aynı gözde ürün sayım yöntemi ile birden fazla ürün sayılacaksa ya da aynı gözden arka arkaya birden fazla ürün toplanacaksa adresin bir kere okutulması sağlandı.",
+        "Mal kabul sipariş detayları sayfasına, sipariş detay ekranındakine benzer şekilde, hedeflenen mal kabul tamamlama tarihi eklendi.",
+        "Mal kabul tamamlama tarihi geçen siparişler için mal kabul sipariş detayları sayfasında “Gecikmeli” rozetinin gösterilmesi sağlandı.",
+        "Mal kabul sipariş detayları sayfasında “Satın Alma Siparişi Bilgileri” alanı yanına “Mal Kabul Ürün Bilgileri” alanı eklendi. Bu alanda Beklenen ürün adeti, Hasarsız alınan ürün adeti ve Karantina ürün adeti ve karantina sebepleri kırılımında ürün adetlerinin gösterilmesi sağlandı.",
+        "Mal Kabul Ürün Bilgileri alanında (Beklenen ürün adeti-Toplam işlenen ürün adeti) => Fark adet bilgisinin gösterilmesi sağlandı.",
+        "Mal Kabul Yönetimi ekranlarında koli adına tıklandığında modal açılması ve açılan modalda koli bilgilerinin gösterilmesi sağlandı.",
+        "Mal Kabul Yönetimi ekranına İrsaliyeler sekmesi eklendi ve irsaliyelere ait bilgilerin gösterilmesi sağlandı.",
+        "Kalite sayımları sekmesinde göz adresi tıklandığında Göz Detay ekranının açılması sağlandı."
+      ]
+    },
+    {
+      "version": "2.21.0",
+      "title": "Maestro v2.21.0",
+      "date": "14.03.2022",
+      "content": [
+        "Siparişlerde aynı gün teslimat bilgisinin alınması ve bu siparişlerin hedeflenen sevk tarihlerinin cut-off saatlerine göre hesaplanması sağlandı.",
+        "Aynı gün teslimat siparişlerine, “Aynı gün teslimat etiketi yapıştırılmalıdır” tanımlı aksiyn VAS’ının otomatik olarak eklenmesi ve paketleme ekranlarında görüntülenmesi sağlandı.",
+        "Koli etiketlerine teslimat türü bilgisi eklendi.",
+        "Depo yönetim ekranlarında teslimat türü bilgisinin gösterilmesi sağlandı.",
+        "Sevkiyatta koli okutulduğunda teslimat türü bilgisinin gösterilmesi sağlandı.",
+        "“Tekrar Yerleştirme” durumundaki ürünler yerleştirilirken son kullanma tarihi bilgisi girilmesi özelliği getirildi.",
+        "Kalite sayımları sekmesine hareket detayı butonu eklenerek sayım yapılan göze yapılan yerleştirme bilgilerinin ayrı bir sekmede gösterilmesi sağlandı.",
+        "Envanter menüsü altına “Son Kullanma Tarihi Takibi” ekranı eklendi. Bu ekranda Son Kullanma Tarihi yaklaşan ve geçen ürünlerin izlenebilmesi sağlandı.",
+        "“Çıkış Paketleri” ekranına satış kanalı bilgisi eklendi",
+        "“Siparişler” ekranına teslimat türü filtresi eklendi."
+      ]
+    },
+    {
+      "version": "2.20.0",
+      "title": "Maestro v2.20.0",
+      "date": "28.02.2022",
+      "content": [
+        "Son kullanma tarihi takip edlimeli olarak tanımlanmış ürünler için Mobil ve WEB mal kabul süreçlerinde Son Kullanma Tarihi bilgisinin girilmesi",
+        "Aynı operasyonun farklı Son Kullanma Tarihine sahip aynı ürünlerinin aynı göze yerleştirilmesine ve transfer edilmesine izin verilmemesi",
+        "Stok listelenen ekranlarda ve ürün detay ekranında Son Kullanma Tarihi bilgisi gösterilmesi",
+        "Mobil ürün sorgulama ve sepet sorgulama ekranlarında listelenen ürünlerin Son Kullanma Tarihi bilgisinin gösterilmesi",
+        "Ürün besleme yönetimi ekranı ile rezerve ürünlerin durumlarının izlenebilmesi",
+        "Rezerve göze yerleştirme, rezerve gözde manuel sayım ve rezerve gözden esas göze ve tersi ürün transfer yapılabilmesi",
+        "Envanter görünümü gözler sekmesine ve göz detay ekranlarına göz tipi bilgisi eklenmesi",
+        "Yeni rezerve stok ürün durumu ve göz tipi bilgilerinin ilgili web ve mobil ekranlarda gösterilmesi",
+        "Toplamada eksik ürün bildirimi yapıldığında kontrol sayımı yapılması",
+        "Kalite sayımları için yerleştime sonrası yeni sayım listeleri oluşturulması ve kalite sayımlarının mobil uygulamada işletilebilmesi",
+        "Kalite sayımlarının izlenmesi ve sayım akış yönetimi ekranında listelenmesi",
+        "Toplama listesi altında toplama planı sekmesine operasyon ve sipariş no eklenmesi"
+      ]
+    },
+    {
+      "version": "2.18.0",
+      "title": "Maestro v2.18.0",
+      "date": "31.01.2022",
+      "content": [
+        "Sipariş yaratıldığında yerleştirilebilir ürünlerin satılabilir stok olarak kabul edilmesi uygulamasına Darıca deposunda son verildi. Artık sadece adreslenmiş stoklardaki ürünler satılabilir ürün olarak kabul edilmeye başlandı. Bu durumda olmayan ürünlerin bulunduğu siparişler için yetersiz stok problemi yaratılmaya başlandı.",
+        "Sayım yapılan listenin bilgisinin mobil sayım ekranında gösterilmesi sağlandı.",
+        "Mobilde sorgulama ekranlarında ekranlar arası geçiş yapılabilmesi sağlandı.",
+        "Geçmişe ait hareketlerin izlenebildiği arama uygulamasına farklı ekranlardan direk ulaşım sağlandı. Bu ekranlar; Sipariş detay ekranı, Envanter görünümü - Araba Detay Ekranı, Envanter görünümü - Sepet Detay Ekranı, Envanter görünümü – Göz Detay Ekranı, Ürün detay ekranı",
+        "Siparişlere eklenen aksiyon VASlarının paketleme ekranlarında görüntülenebilmesi sağlandı.",
+        "Siparişlere eklenen vaslarının VASların durumlarının izlenebilmesi için Sipariş Detayları ekranına Katma Değerli Hizmetler sekmesi eklendi.",
+        "WEB ekranlarında Sevkiyat menüsü altına Çıkış paketlerinin durumlarının izlenebildiği Çıkış Paketleri ekranı eklendi.",
+        "Ürünün tanımlı olduğu zone bilgisi Ürün Detayları ekranına eklendi.",
+        "Ürün Detay ekranına ürünün dahil olduğu sayımlara ait bilgilerin gösterildiği Sayımlar sekmesi eklendi.",
+        "Sipariş detay ekranına Notlar sekmesi eklendi ve bu ekranda siparişe not eklenmesi ve eklenen notların görüntülenebilmesi sağlandı.",
+        "Ürün Detay ekranına ürünün iade edildiği iade siparişlerine ait bilgilerin gösterildiği İadeler sekmesi eklendi.",
+        "Geçmişe ait hareketlerin izlenebildiği arama uygulamasına bağlanabilmek için WEB ekranlarında Envanter menüsü altına Hareket Geçmişi başlığı eklendi."
+      ]
+    },
+    {
+      "version": "2.17.0",
+      "title": "Maestro v2.17.0",
+      "date": "17.01.2022",
+      "content": [
+        "Yeni WEB ürün kabul ekranında operatörün Hasarlı, Tanım Uyuşmazlığı, Barkodsuz, Çİft Barkodlu ve Barkod Okunamıyor sebepleri ile karantina sepetine ürün ayırabilmesi sağlandı.",
+        "Yeni WEB ürün kabul ekranında operatörün master karton barkodu okutarak mal kabul yapabilmesi sağlandı.",
+        "Sistemsel sayım emirlerinin ve manuel oluşturulan sayım planlarından gelen sayım emirlerinin ayrı listelere düşmeleri sağlandı. Bir sayım planı oluşturulduğunda sadece o sayım planındaki emirler için liste oluşması sağlandı.",
+        "Sayımların toplamada olduğu gibi “S” rota çizilerek yapılması sağlandı.",
+        "Sayım Listeleri ve Aktif Sayımlar sekmelerine Bölge, Sayım Planı ve Kaynak bilgileri eklendi. Sistemsel Sayımlar sekmesine Bölge bilgisi eklendi.",
+        "WEB Ürün Kabul ve Tekli Paketleme ekranlarında F5 yapıldığında ekranın kaldığı yerden devam etmesi sağlandı.",
+        "Mobilde sorgulama ekranlarına Araba Sorgulama ekranı eklendi ve bu ekranda araba barkodu okutularak araba sorgulaması yapılması sağlandı.",
+        "Mobil sorgulama ekranlarında barkod okutma ekranına dönülmeden yeni barkod okutularak sorgulama yapılabilmesi sağlandı.",
+        "Envanter menüsü altında Envanter Görünümü ekranında bulunan Gözler sekmesinde bir göz etiketine tıklandığında açılan Göz Detay ekranına Sayımlar sekmesi eklendi. Bu sekmede seçilen gözde yapılan tüm sayımların sonuçlarının gösterilmesi sağlandı."
+      ]
+    },
+    {
+      "version": "2.16.0",
+      "title": "Maestro v2.16.0",
+      "date": "03.01.2022",
+      "content": [
+        "Mobilde Sorgulama menüsü altına Koli Sorgulama eklendi. Koli barkodu okutularak koli ile ilgili bilgilerin görüntülenmesi sağlandı.",
+        "Mobilde Sorgulama menüsü altına Sepet Sorgulama eklendi. Sepet barkodu okutularak sepet ile ilgili bilgilerin görüntülenmesi sağlandı.",
+        "Mal kabul işlemlerinin yürütülebileceği yeni WEB Ürün Kabul Ekranı geliştirildi. Problemsiz ürünlerin mal kabul işlemlerinin yapılması ve tanımsız ürünlerin karantina sepetine ayrılması işlemlerinin gerçekleştirilmesi sağlandı. ",
+        "Mobilde yapılan manuel sayım işlemlerinin sonuçlarının izlebilmesi için WEB ekranlarında Envanter menüsü altında Sayımlar ekranına Manuel Sayımlar sekmesi eklendi.",
+        "Bir operatör bir sayım listesine başlayıp listeyi bitirmeden uygulamadan çıkmış ise yeni bir sayım listesinin sayım işlemine başlamasına izin verilmeyecek. Operatör mobil uygulamada sayıma başla dediğinde yarım bıraktığı sayım listesi işlemi bıraktığı yerden devam ettirilecek. İlgili sayım listesi bitirildikten sonra yeni sayım listesinin sayım işlemine başlamasına izin verilecek.",
+        "Satın alma siparişi oplogOne’dan gelen siparişler için “Hedeflenen mal kabul tarihi” hesaplama yönteminde değişiklik yapıldı. Eğer ürünler depoya varış tarihinden önce depoya geldiyse hedeflenen mal kabul tarihi one’dan gelen tarih +1 gün şeklinde hesaplanacak. Eğer ürünler one’dan gelen tarihten sonra depoya geldiyse hedeflenen mal kabul tarihi depoya geliş tarihi +1 gün şeklinde hesaplanacak.",
+        "Sevk edilmiş siparişlerin kolilerinin sevkiyatta tekrar okutularak siparişler için “Entegrasyon kodu hatası” ve “Kargo kota reddi” problemlerinin açılabilmesi sağlandı.",
+        "Entegrasyon kodu hatası problemi olan sipariş için yeni kargo kodu veya dokümanı gönderilmesi sağlandı.",
+        "Yeni kargo kodu veya dokümanı gönderildiğinde Problem Çözücü ekranında yeni kargo etiketi veya kargo dokümanı yazdırılması sağlandı."
+      ]
+    },
+    {
+      "version": "2.15.0",
+      "title": "Maestro v2.15.0",
+      "date": "20.12.2021",
+      "content": [
+        "Mobil uygulamada “Sayım” menüsü altında “Manuel Sayım” alt menüsü eklendi ve manuel olarak göz sayım yapılabilmesi sağlandı.",
+        "Sistem tarafından oluşturulan sayım emirlerinin izlenebilmesi için “Envanter” menüsü altında “Sayım” ekranlarına “Sistemsel Sayımlar” sekmesi eklendi.",
+        "Bir göz için bir sayım türü ile bir sayım tamamlandığında, aynı göz için oluşturulmuş ve sayımına başlanmamış emirlerin tamamlandıya çekilmesi sağlandı. Örneğin bir göz için göz sayım emri yapıldığında o göz için oluşturulmuş ve henüz sayımına başlanmamış göz sayım ve ürün sayım emirlerinin tamamlandıya çekilmesi sağlandı.",
+        "Sevkiyat işlemlerinin satış kanalı ve kargo firması seçilmeden sadece koli etiketi okutularak başlabilmesi ve tamamlanabilmesi sağlandı. Birden fazla koliye sahip bir siparişin kolisi okutulduğunda sadece siparişin diğer kolilerinin okutularak sevkiyata devam edilebilmesi kontrolü eklendi.",
+        "Ürün detayları sayfasına sadece ürünün dahil olduğu siparişlerin gösterildiği “Siparişler” sekmesi, ve sadece ürünün dahil olduğu mal kabul işlemlerinin gösterildiği “Mal Kabuller” sekmesi eklendi.",
+        "Tekli ve çoklu paketleme ekranlarında paketleme işlemlerinin barkod okutularak tamamlanabilmesi sağlandı.",
+        "Etiketleme ekranlarında kargo etiketlerinin koli barkodu okutularak tekrar yazdırılabilmesi sağlandı.",
+        "Stok durumu ekranı açıldığında filtreleme yapılmadan ekranda bilgi gösterilmemesi işlevi eklendi.",
+        "Boş pakete sahip siparişlerin paketleme işlemlerinin boş paket silinmeden tamamlanmasına izin vermeyen kontrol eklendi.",
+        "Tekli toplama yapılan siparişin sipariş detaylarında toplama sepeti bilgisinin gösterilmesi sağlandı.",
+        "Toplama işlemi sırasında ürünün bulunamadığı gözler için sadece ürün sayım emri yaratılması işlevi eklendi.",
+        "Tekli paketleme ekranında eksik ürün bildirimi yapıldığında ürün sayım emri yaratılması işlevi eklendi.",
+        "Tekli paketleme ekranında sepet detayı butonuna tıklandığında paketlenmeyen siparişlerin başta sıralanması sağlandı."
+      ]
+    },
+    {
+      "version": "2.12.0",
+      "title": "Maestro v2.12.0",
+      "date": "08.11.2021",
+      "content": [
+        "Tek ürünlü siparişler için toplama listelerinin oluşturulması ve siparişlerin ürünlerinin toplanması sağlandı.",
+        "Tek ürünlü siparişlerin paketlenebilmesi için tekli paketleme ekranı geliştirildi.",
+        "Tek ürünlü akış türlerinin toplama işlemine açılıp kapatılabilmesi için Akış yönetimi ekranına 'Tek ürünlü' akış türü eklendi.",
+        "Toplama listeleri sekmesinde toplama listesi içindeki siparişlerin gösterilmesi sağlandı.",
+        "Çoklu paketleme ekranında yaratılan kolilerin kaçıncı koli olduğu bilgisi eklendi.",
+        "Yerleştirme bekleyen yetersiz stok problemli siparişlerin durumunun sipariş detayları sayfasında 'Yerleştirme Bekliyor' olarak gösterilmesi sağlandı.",
+        "Transfer arabalarından karantina durumu devam etmeyen siparişlerin karantina sepetleri kaldırıldı.",
+        "Herhangi bir probleme sahip bir siparişin ürünlerini barındıran tüm sepetlerin karantina sepetleri sekmesinde gösterilmesi sağlandı.",
+        "Belirli süreçlere log kayıtlarının atılması sağlandı."
+      ]
+    },
+    {
+      "version": "2.7.0",
+      "title": "Maestro v2.7.0",
+      "date": "06.08.2021",
+      "content": [
+        "Paketleme masasında eksik ürün olduğu belirtilen siparişlere otomatik olarak 'Eksik Toplama' problemi eklenmesi işlevi eklendi.",
+        "Paketleme masasında hiç ürün okutulmadan da karantinaya ayırma işlevi eklendi.",
+        "Bir sipariş paketleme masasında karantinaya ayrıldıktan sonra iptal edilirse siparişin paketleme masasında yeni bir karantina sepetine eklenerek stoğa yerleştirilmesi işlevi eklendi.",
+        "Paketleme ekranında siparişlere hediye notu eklenebilmesi işlevi eklendi.",
+        "Paketleme ekranında manuel olarak barkod girebilme işlevi eklendi.",
+        "Eksik toplama problemi olan ve müşteri hizmetlerinden eksik gönder cevabı dönülen siparişlerin sevk edilebilmesi işlevi eklendi.",
+        "Sistemsel olarak takibi yapılamayan kargoların sipariş durumlarının destek ekibi tarafından manuel olarak teslim edildiye çekilmesi işlevi eklendi.",
+        "Siparişlerin Tekli ürün, Yüklü ürün, Ağır ürün, İri ürün ve Çoklu ürün olarak etiketlenmesi ve bu etiketlerin sipariş detayları sayfasında gösterilmesi işlevi eklendi.",
+        "Yeni sipariş etiketlerine göre toplama listeleri oluşturulması ve siparişlerin bu toplama listelerine eklenmesi işlevi eklendi.",
+        "Oluşan toplama listelerinin Toplama Yönetimi ekranında Toplama Listeleri ekranında listelenmesi ve toplama listesine tıklanarak listeye ait bilgilerin görüntülenebilmesi işlevi eklendi.",
+        "Toplama işleminin toplama listelerinin toplanması şeklinde yapılması işlevi ve bölgeler arası toplama yapılabilmesi işlevi eklendi.",
+        "Sipariş detayları sayfasına siparişin geçtiği aşamaların tarih ve zaman bilgileri ile ilgili işlemin kim tarafından yapıldığı bilgilerinin gösterildiği “Operasyonel Detaylar” sekmesi eklendi.",
+        "Pazaryeri ve uluslarası gönderilerin kargo etiketlerinin paketleme masasında yazdırılması işlevi eklendi.",
+        "Yurtiçi pazaryeri siparişleri için “Sabit Boyutlu Etiket (Fixed Sized Label)” yazdırılması işlevi eklendi.",
+        "Pazaryeri siparişlerinin 2 gün sonra otomatik olarak sevk edildi aşamasına çekilme işlevi eklendi.",
+        "Operatörün paketleme yaparken farklı bir paketleme masasında yer alan arabadaki gözü okutup paketlemeye devam edebilmesi işlevi eklendi.",
+        "Paketleme ekranı yenilendiğinde paketleme işleminin kaldığı yerden devam etmesi işlevi eklendi.",
+        "Toplama Yönetimi ekranına paketleme masasında karantina işlemi için kullanılan sepetlere ait bilgilerin gösterildiği “Karantina Sepetleri” sekmesi eklendi.",
+        "Operatörün başladığı bir tolama işlemi yarım bırakması ve farklı bir toplama işlemine başlaması durumunda uyarı mesajı çıkması işlevi eklendi.",
+        "Ürün sayım emirlerinin mobil olarak işletilebilmesi işlevi eklendi."
+      ]
+    },
+    {
+      "version": "2.6.0",
+      "title": "Maestro v2.6.0",
+      "date": "21.06.2021",
+      "content": [
+        "Mal kabul işlemlerinde manuel olarak rakam girilebilmesi işlevi eklendi.",
+        "Siparişin hediye paketi olup olmayacağı ve siparişe eklenmesi gereken hediye notu olup olmadığı bilgisinin paketleme ekranında gösterilmesi işlevi eklendi.",
+        "Siparişlerin eksik toplanması sonucu oluşan ürün sayımlarının mobil uygulamada işletilmesi sağlandı.",
+        "Eksik toplanan siparişler için müşteri hizmetlerinden eksik gönderilebilir cevabı döndüğünde, ürünlerin ayrıldığı karantina sepetinin paketleme masasında okutularak siparişin eksik olarak paketlenebilmesi ve sevk edilebilmesi işlevi eklendi.",
+        "Eksik toplanan bir siparişin paketleme masasına gelmeden iptal edilmesi durumunda siparişin paketleme masasında iptal edilen sipariş muamelesi görmesi işlevi eklendi. İptal edilen siparişe ait eksik toplama probleminin sipariş iptal edildi açıklaması ile kapatılması işlevi eklendi.",
+        "Eksik toplanan bir siparişin paketleme masasında karantinaya alınmasından sonra iptal edilmesi durumunda, ürünlerin ayrıldığı karantina sepetinin yerleştirme arabasına okutularak sepetteki ürünlerin stoğa alınması işlevi eklendi. İptal edilen siparişe ait eksik toplama probleminin sipariş iptal edildi açıklaması ile kapatılması işlevi eklendi.",
+        "Bir ürün yaratılırken varsayılan olarak ürünün tüm bölge kataloglarına tanımlanması sağlandı.",
+        "Paketleme ekranında manuel olarak barkod girilmesi işlevi eklendi.",
+        "Teslim tesellüm belgesi yüklenmesi zorunlu olmayan siparişlerin sevkiyatında teslim tesellüm mesajı ve fotoğraf yükleme alanlarının gösterilmemesi işlevi eklendi.",
+        "Elden iletilen kargolar (doğrudan depo kapısından) ya da bir sebepten sistemsel olarak takibi yapılamayan kargolara ait siparişlerin durumlarının L2 mühendisi tarafından manuel olarak teslim edildiye çekilebilmesi sağlandı.",
+        "Eksik toplama problemi olmayan bir siparişte paketleme masasında eksik ürün olduğu tespit edildiğinde ve ürünler karantinaya ayrıldığında sipariş için eksik toplama problemi yaratılması işlevi eklendi. Ancak bu siparişler için şimdilik sayım emri yaratılmamaktadır. Dolayısıyla bu şekilde yaratılan eksik toplama problemlerinin şimdilik ürün sayımı yapılamamaktadır."
+      ]
+    },
+    {
+      "version": "2.5.0",
+      "title": "Maestro v2.5.0",
+      "date": "31.05.2021",
+      "content": [
+        "WEB ekranlarında menü bileşenlerinin gösterim şekli akordiyon menü gösterimi şeklinde değiştirildi. Böylece alt bileşenleri olan ana menü başlıklarının yanına 'üçgen' işaretleri eklendi. 'Üçgen' işaretine basıldığında ana menüye bağlı alt bileşenlerin açılması işlevi eklendi.",
+        "L2 mühendisinin manuel kargo gönderimi işlemlerini yürütülebilmesi sağlandı. Bir sipariş sistemde görülen kargo firmasından farklı bir kargo firması ile sevk edilmiş ise, bu siparişin kargo firması bilgilerinin değiştirilebilmesi işlevi eklendi. Sevkiyat veya etiketleme adımında olan bir siparişin paketleme adımına veya paketleme ve etiketleme adımında olan bir siparişin sevkiyat adımına alınabilmesi işlevi eklendi.",
+        "Kargoist ve Bir Günde Kargo firmaları ile sevkiyat yapılabilmesi sağlandı.",
+        "Paketleme ekranında VAS dokümanı üstüne fare ile tıklandığında VAS dokümanının çıktısının alınması sağlandı.",
+        "Dış kaynaklı kargo gönderi yöntemine sahip siparişler için kargo firması değişiklik problemi açılmasının engellenmesi özelliği eklendi."
+      ]
+    },
+    {
+      "version": "2.4.0",
+      "title": "Maestro v2.4.0",
+      "date": "10.05.2021",
+      "content": [
+        "Ön mal kabul sırasında koli bakodu yazdırma işlevi eklendi. Kolilere yapıştırılan bu barkodların mal kabul sırasında okutulması işlevi eklendi.",
+        "Master Kartonların L2 mühendisi tarafından sisteme tanımlanabilmesi işlevi eklendi. Tanımlanan Master Kartonların mal kabul sırasında okutularak kabul işlemlerinin yapılması sağlandı.",
+        "Mal kabul sırasında karantina sepetine eklenen ürünlerin, karantina sebebi seçilerek sepete eklenmeleri ve karantinaya alınmaları işlevi eklendi. Karantinaya alınan ürünler için karantina sebebi ile beraber problem kaydı açılması işlevi eklendi.",
+        "Mal kabul sırasında açılan problemlerin izlenebildiği 'Mal Kabul Problem Çözücü' ekranı WEB ekranları menüsüne eklendi.",
+        "Mal kabul sırasında açılan problemlerin çözüm bilgilerinin L2 mühendisi tarafından iletilmesi işlevi eklendi.",
+        "Mal Kabul Problem Çözücü ekranından erişilen ve Problem Çözücü ile Admin rolü kullanıcılarının erişimine açık olan, Mal kabul sırasında karşılaşılan problemlerin çözüm aşamalarının izlenebildiği ve çözüm aksiyonlarının alındığı 'Mal Kabul Problem Çözücü' ekranı eklendi.",
+        "WEB ekranlarından Mal Kabul ekranında bir operasyon seçildiğinde, operasyona ait mal kabul işlemlerinde açılan problem rakamlarının gösterildiği Mal Kabul Problem Sayısı kolonu eklendi.",
+        "Mal kabul ekranında operasyona ait sipariş numarası seçildiğinde açılan 'Satın Alma Sipariş Detayı' sayfasına 'Mal Kabul Problemler' ve 'Koliler' sekmeleri eklendi.",
+        "Satın alma sipariş detayı sayfasında irsaliye seçildiğinde açılan 'İrsaliye Detay' bilgileri sayfasına 'Mal Kabul Problemler' ve 'Koliler' sekmeleri eklendi.",
+        "WEB ekranları menüsünde 'Problemler' ekranına göz sayım emirlerine ait bilgilerin listelendiği 'Sayım Emirleri' sekmesi eklendi.",
+        "Mobil uygulamada ana menüye 'Sayım' alt menüsü eklendi. 'Sayım' menüsü altına 'Özel Sayım' ve 'Göz Sayım' emirleri başlıkları eklendi.",
+        "Problem çözücülerin 'Özel Sayım' ve 'Göz Sayımı' emirlerini mobil olarak işletebilmeleri sağlandı.",
+        "Sevk işlemi tamamlanmış ancak teslimatı yapılmamış siparişlerin iade işlemlerinin yapılabilmesi işlevi eklendi."
+      ]
+    },
+    {
+      "version": "2.3.0",
+      "title": "Maestro v2.3.0",
+      "date": "19.04.2021",
+      "content": [
+        "L2 mühendisinin yeni konfigürasyonlar ile (Bölge Adı, Bölge Önceliği, Bölge Maksimum Toplama Kapasitesi, Bölge Adresleri, Bölge Ürün Kataloğu) yeni bölge yaratabilmesi ve yaratılan bölgenin konfigürasyonlarında değişiklik yapabilmesi sağlandı.",
+        "Operasyon Ayarları ekranına 'Bölgeler' sekmesi eklendi.",
+        "Bölgeler ekranından bölge detay bilgilerin görüntülenebildiği 'Bölge Detayları' sayfasına erişim işlevi eklendi.",
+        "Depo İçi Durum sayfası Güncel Durum sekmesine 'Bölge' kolonu eklendi.",
+        "Depo İçi Durum sayfasına 'Bölge Durumu' sekmesi eklendi.",
+        "Toplama Yönetimi sayfasında Bekleyen Siparişler sekmesine 'Toplanacak Bölgeler', 'Aday Bölgeler', 'Atanan Araba', 'İl' ve 'İlçe' kolonları eklendi.",
+        "Toplama Yönetimi sayfasında Aktif Toplamalar ve Paketleme Alanı sekmelerine 'Toplanan Bölge' kolonu eklendi.",
+        "Toplama Yönetimi sayfasında Park Alanı sekmesine 'Atanan Bölge Adresi', 'Atanma Tarihi' ve 'Atanan Sipariş Sayısı' kolonları eklendi. Bu sekmedeki 'Son Görülen Adres' ve 'Son Görülülme Tarihi' kolonları çıkarıldı.",
+        "Toplama Yönetimi sayfasına 'Bölgedeki Toplamalar' sekmesi eklendi.",
+        "'Katma Değerli İşlemler (VAS)' dokümanı bulunan bir siparişin VAS dokümanın sipariş kolisine eklenebilmesi için, Paketleme Ekranında siparişe ait VAS dokümanlarının listelenmesi ve yazdırılması işlevi eklendi.",
+        "Toplanacak olan siparişlerin hangi bölgelerden toplanacağı ve hangi arabalara atanacağına sistem tarafından karar verilmesi işlevi eklendi.",
+        "Bölge ve araba ataması yapılan siparişlerin toplama yapılacak bölgede 'S' şeklinde rota çizilecek şekilde toplanması için rota hesaplaması işlevi eklendi.",
+        "Toplama sırasında bir ürün bir adreste bulunamadığında sistem tarafından ürünün bulunamadığı adrese atanan ve sadece siparişteki ürün ile ilişkilendirilen 'Göz Sayım Emri' oluşturulması işlevi eklendi.",
+        "Toplama sırasında ürün bir adreste bulunamadığında ürünün toplama yapılan bölgede farklı bir adreste bulunması durumunda 'S' şeklinde izlenecek rotayı bozmayacak şekilde yeni rota hesaplanması işlevi eklendi.",
+        "Toplama sırasında bir ürün bir adreste bulunamadığında, ürünün toplama yapılan bölgede farklı bir adreste bulunamaması durumunda, sipariş için 'Eksik Toplama' problemi açılması işlevi eklendi.",
+        "Yerleştirme başlarken ürünlerin tanımlı olduğu bölgelerin bulunarak bölgelerin öncelik sırasına göre alfabetik olarak sıralanması ve kullanıcının yerleştirme bölgelerine yönlendirilmesi işlevi eklendi.",
+        "Bir bölgedeki yerleştirme işlemi bittiğinde sistemin otomatik olarak kullanıcıyı bir sonraki bölgeye yönlendirmesi işlevi eklendi.",
+        "Kullanıcının bir bölgedeki yerleştirme bitmeden manuel olarak diğer bölgelere ilerleyebilmesi işlevi eklendi.",
+        "Yerleştirme sırasında, ürünün yerleştirilmek istenen bölgenin ürün kataloğunda olup olmadığı kontrol edilmesi ve bölgenin kataloğunda tanımlı olmayan ürünün bölgeye yerleştirilmesine izin verilmemesi işlevi eklendi."
+      ]
+    },
+    {
+      "version": "2.2.0",
+      "title": "Maestro v2.2.0",
+      "date": "29.03.2021",
+      "content": [
+        "Yeni problem kaydı yaratma ve yaratılan problem kaydını çözme yetkilerine sahip “Problem Çözücü” rolü yaratıldı.",
+        "Menüde Sekiyat Yönetimi ekranının altına konumlandırılan ve siparişler için açılan problemlerin listelendiği 'Problemler' ekranı eklendi.",
+        "Sevkiyat Yönetimi ve Toplama Yönetimi ekranlarına, siparişler için açılan problemlerin sayısını gösteren 'Problem Sayısı' kolonu eklendi.",
+        "Sipariş Detayları sayfasına, sipariş için açılan problemlerin listelendiği 'Problemler' sekmesi eklendi.",
+        "Menüye yeni eklenen 'Problemler' ekranından ulaşılabilen 'Problem Çözücü' ekranı eklendi.",
+        "Problem Çözücü ekranına siparişe ait yeni problem kaydı açma işlevi eklendi.",
+        "Problem Çözücü ekranında siparişe ait problemlerin 'Sipariş Referans No' yazılarak listelenebilmesi veya 'Problem Referans No' okutularak siparişe ait problemin görüntülenebilmesi işlevi eklendi.",
+        "Problem Çözücü rolündeki kullanıcının siparişler için şu başlıklarda manuel olarak yeni problem kaydı açabilmesi işlevi eklendi: Koli Etiketi Eksik ya da Hasarlı problemi, Kargo Etiketi Eksik ya da Hasarlı problemi, Kargo Firması Kota Reddi problemi, Pazaryeri Kargo Firması Kota Reddi problemi, Kargo Firması Tercih Değişikliği problemi",
+        "İki başlık için sistem tarafından otomatik olarak yeni problem kaydı açılması işlevi eklendi: Yanlış Kargo Gönderim Adresi problemi, Sorunlu Kargo Gönderisi problemi",
+        "Yanlış kargo adresi problemi yaşanan bir pazaryeri siparişi için L2 mühendisinin adres bilgisini düzeltebilmesi işlevi eklendi.",
+        "Kargo firması kota reddi problemi yaşanan bir pazaryeri siparişi için L2 mühendisinin yeni kargo dokümanı veya kargo kodu tanımlaması işlevi eklendi."
+      ]
+    },
+    {
+      "version": "2.1.0",
+      "title": "Maestro v2.1.0",
+      "date": "15.03.2021",
+      "content": [
+        "Sevkiyat Yönetimi ekranına 'Cut-off' ve 'Beklenen Sevk Tarihi' kolonları ve Cut-Off görmüş siparişler için  'Sevk Edilmemiş Cut-off' ve 'Sevk Edilmemiş Gecikmeli' analitikleri eklendi.",
+        "Farklı sipariş kanallarından (WEB, Pazaryeri) sipariş alınması imkanı sağlandı. Siparişlerin sipariş kanalına göre ayırt edilebilmeleri için, bu bilginin Sipariş Yönetimi, Sevkiyat Yönetimi, Toplama Yönetimi ve Etiketleme ekranlarında gösterilmesi sağlandı.",
+        "Farklı gönderi yöntemleri ile (Oplog Seçimli, Kapıda Ödeme, Gönderici Ödemeli, Dış Kaynaklı Kargo) sipariş alınması ve bu siparişlerin sevk edilebilmesi sağlandı. Gönderi yöntemi bilgisinin 'Sipariş Detayları' sayfasında gösterilmesi sağlandı.",
+        "Siparişlerin toplanma durumlarının anlık olarak takip edilebilmesi için 'Toplama Yönetimi' ekranı eklendi.",
+        "Toplama Yönetimi ekranına, toplanmayı bekleyen siparişlerden istenilen siparişlere toplanma işlemi için öncelik tanıma işlevi eklendi. Toplama Yönetimi ekranında siparişlerin öncelik sırasına göre sıralanmaları ve gösterilmeleri özelliği eklendi.",
+        "Toplama Yönetimi ekranına, toplanmayı bekleyen siparişlere ait bilgilerin gösterildiği 'Bekleyen Siparişler' sekmesi eklendi.",
+        "Toplama Yönetimi ekranına, aktif olarak toplanan siparişlere ait bilgilerin gösterildiği 'Aktif Toplamalar' sekmesi eklendi. Bu sekmede araba adresi bağlantısına tıklandığında açılan ve toplama yapılan arabalara atanan siparişler ile bu siparişlerin toplanma durumlarının gösterildiği araba durum modalı eklendi.",
+        "Toplama Yönetimi ekranına, aktif olarak paketlenen siparişlere ait bilgilerin gösterildiği 'Paketleme Alanı' sekmesi eklendi. Bu sekmede araba adresi bağlantısına tıklandığında açılan ve paketleme alanına bırakılan arabalara atanan siparişler ile bu siparişlerin paketlenme durumlarının gösterildiği araba durum modalı eklendi.",
+        "Toplama Yönetimi ekranına, park alanına bırakılan arabaların bilgilerinin gösterildiği 'Park Alanı' sekmesi eklendi.",
+        "Toplama Yönetimi ekranına, siparişlerin toplama ve paketlemele durumlarını tek yerden analitik olarak takip edilebilmesi için 'Toplanma Yoğunluk Oranı'  ve 'Paketleme Yoğunluk Oranı' analitikleri eklendi.",
+        "Mobil uygulamada 'Toplama' işlemi seçildiğine kullanıcıyı karşılayan, 'Toplamaya Başla' ve 'Toplamaya Devam Et' seçenekleri eklendi.",
+        "Yeni bir toplama işlemi başlatmak için 'Toplamaya Başla' seçildiğinde, toplanacak siparişlerin önceliklendirme ve siparişteki ürün adedi bilgilerine göre gruplandırılması ve toplama yapılacak arabanın sistem tarafından otomatik olarak atanarak kullanıcıya gösterilmesi özelliği eklendi.",
+        "Önceden başlayan ve bitirilmeden kesilen toplama işlemleri için 'Toplamaya Devam Et' seçeneği seçildiğinde, eksik kalan toplamanın yapıldığı arabalar dışında araba okutulmaması için kontrol eklendi. Bir operatörün başladığı ancak kesilen toplama işlemine farklı bir operatörün devam edebilmesi imkanı sağlandı.",
+        "Yurt dışı gönderim yapılabilmesi için CDEK ve UPS Global entegrasyonları sağlandı.",
+        "Farklı satış kanallarından gelen siparişlerin (Web, Pazar Yeri) ayrıcalıklı olarak sevk edilebilmeleri için sevkiyat ekranına 'Web Sevkiyatları' ve 'Pazar Yeri Sevkiyatları' seçenekleri eklendi.",
+        "Depo Ayarları ekranına, operasyonlarda kullanılan arabalar hakkında daha detaylı bilgi sahibi olunması için 'Arabalar' sekmesi eklendi. Bu sekmede araba adresi bağlantısına tıklandığında açılan ve operasyonlarda kullanılan arabaların durumlarının gösterildiği araba durum modalı eklendi."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "title": "Maestro v2.0.0",
+      "date": "12.02.2021",
+      "content": [
+        "UPS Global ve CDEK hariç tüm kargo firmaları ile sadece Gönderici Ödemeli tipi kargo gönderimlerinin desteği eklendi. (Kapıda Ödeme vs. olmadan)",
+        "Ticket’lar üzerinden L2 mühendislerin bir operasyonun çoklu kargo firması tercihlerini belirtebilmesi sağlandı.",
+        "Ticket’lar üzerinden L2 mühendislerin bir kargo firmasını global olarak aktif/deaktif edebilmesi sağlandı.",
+        "Maestro üzerindeki İade, Paketleme, Kargo Etiketleme gibi tüm istasyonların birden fazla masada çalışması sağlandı.",
+        "Kargo etiketle operasyon adımı eklendi. Paketlemesi tamamlanmış kolilerin kargo etiketlerinin yapıştırılması için ayrı bir adım oluşturuldu ve Kargo Etiketleme operatör ekranı eklendi.",
+        "Süpervizörlerin kargo etiketlenme adımını görebilmesi için Sipariş Detayları sayfasına KE adımı eklendi.",
+        "Süpervizörlerin sipariş yönetimi sayfasında kargo firmalarını görüntüleyebilmesi için görsel iyileştirmeler yapıldı.",
+        "Süpervizörlerin sipariş detayları sayfasında kargo firmalarını ve sevkiyat detaylarını görüntüleyebilmesi için görsel iyileştirmeler yapıldı.",
+        "Süpervizörler tarafından sevk edilmesi gereken kolilerin takibini kolaylaştırmak adına Sevkiyat Yönetimi sayfası eklendi.",
+        "Sevkiyat Yönetimi üzerinden sevkiyat geçmişi ve detaylarının görüntülenmesi sağlandı.",
+        "Sevkiyat sürecinin birden çok kargo firmasını desteklenmesi sağlandı.",
+        "Sevkiyat sürecine “ya hep ya hiç” mantığına göre sorunlu ve iptal olmayan siparişleri sevk etmek üzere kontroller eklendi.",
+        "Sevkiyat sürecinde teslim tesellüm sayfasının fotoğrafının eklenmesi zorunlu hale getirildi."
+      ]
+    },
+    {
+      "version": "1.5.0",
+      "title": "Maestro v1.5.0",
+      "date": "28.12.2020",
+      "content": [
+        "Depo İçi Durum - Güncel Durum tablosuna Adresi Türü ve Adres Etiketi kolonları eklenmiştir.",
+        "Supervisorlar artık Güncel Versiyon ve Son Güncelleme Tarihi'ni sol menünün alt kısmında görebilmektedir. Ayrıca yeni bir güncelleme yayımlandığında 3 gün süreyle sağ üst kullanıcı menüsünde bildirim ikonu belirmektedir.",
+        "Karantina yönetimi sayfasına, kontrol ürünleri sekmesi eklendi.",
+        "Adresten adrese transferde ürün listesinde ui problemi düzeltildi."
+      ]
+    },
+    {
+      "version": "1.4.0",
+      "title": "Maestro v1.4.0",
+      "date": "23.12.2020",
+      "content": [
+        "Anasayfa ekranında açılabilir menülerin tasarımı değişti.",
+        "Adresten adrese transfer eklendi.",
+        "Stoktan karantinaya transfer eklendi.",
+        "Karantinadan problemsize transfer eklendi.",
+        "Supervisor Karantina Yönetimi ekranına Kontrol tabı eklendi. Kontrol ürünlerinin olduğu sepetlere ve içerdiği ürün miktarlarına artık bu ekrandan erişilebilmektedir."
+      ]
+    },
+    {
+      "version": "1.3.1",
+      "title": "Maestro v1.3.1",
+      "date": "",
+      "content": ["Depo içi durum verilerini gösterme hatası düzeltildi."]
+    },
+    {
+      "version": "1.3.0",
+      "title": "Maestro v1.3.0",
+      "date": "",
+      "content": [
+        "Tanımsız İade Paketini artık sisteme kayıt edebiliyoruz. Hiç bir şekilde bir siparişle eşleştirilemeyen iadeler için kargo paketini bilgilerini doldurduktan sonra Tanımsız iade kısmına tıklayabilir ve ürün kısmını seçerek barkod okutup sisteme kayıt edebiliriz. Kayıt edilen tanımsız iade, Omnitro ile paylaşılmaktadır.",
+        "İade Yönetimi ekranında artık Tanımsız iade kolonu vardır, sisteme kayıt edilen tanımsız iadeler buradan takip edilebilir.",
+        "İade'de kontrol için alınan ürünler için Kontrol ürünleri seçimini yapabiliyoruz. İadesi gelen ürünler kontrol edilmek üzere operasyona tekrar gönderilecekse, bu ürünleri boş bir sepet okutup kontrol ürünleri olarak seçip eklediğimizde, artık hasarlı olarak girmemize gerek kalmayacaktır."
+      ]
+    },
+    {
+      "version": "1.2.1",
+      "title": "Maestro v1.2.1",
+      "date": "",
+      "content": [
+        "Supervisorları Güncellemeler sayfasına yönlendirecek menü elemanı görüntülenme problemi çözüldü. Sağ üst menüden Güncellemeler sayfasına geçiş yapabilirsiniz."
+      ]
+    },
+    {
+      "version": "1.2.0",
+      "title": "Maestro v1.2.0",
+      "date": "",
+      "content": [
+        "İade Yönetimi ekranları eklendi. Artık supervisorlar İadelerin durumlarını, Depoya kabul edilen iade kolilerini, işleme alınma durumlarını ve tamamlanma durumlarını görebilirler.",
+        "İade alım işlemi sırasında ürün barkodu artık klavye ile yazılabilir durumdadır. Yırtılmış barkodları okutamama durumunda yazarak girebilirsiniz.",
+        "Bir siparişe bağlı iade alındığında Sipariş Detayı ekranında da hangi iade kolilerinin alındığını görebilirsiniz.",
+        "Artık yeni güncelleme geldiğinde zorunlu olarak Maestro telefon uygulaması güncellemenin yapılmasını isteyecektir ve kullanıcıyı yeni versiyonu indirebileceği uygulamaya yönlendirecektir. Kullanıcı yönlendirildiği yerdeki Maestro uygulamasını indirerek yeni versiyonu kullanmaya başlayabilir.",
+        "İade Yönetimi ekranlarında sağ üst kısma liste görünümü de ekledik, bu şekilde, iadeleri liste detayında görebilirsiniz."
+      ]
+    },
+    {
+      "version": "1.1.1",
+      "title": "Maestro v1.1.1",
+      "date": "",
+      "content": [
+        "Sipariş Yönetimi'nde geçmişte sevk edilen ve müşteriye ulaşan siparişlerin tamamlanma sürelerindeki gösterimde oluşan hata giderildi."
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "title": "Maestro v1.1.0",
+      "date": "",
+      "content": [
+        "Mal Kabul’de oluşturulan irsaliyenin barkodu, istenildiği zaman tekrar çıkarılabilir.",
+        "Paketlemede, koli etiketi paketleme tamamlandıktan sonra, istenirse tekrar çıkarılabilir.",
+        "Sevkiyat işleminin arayüzü yenilendi. Önceden sevkiyat ekranında süreci tamamlamak için bir butonumuz yoktu. Şimdi “Süreci Tamamla” buton ile kolileri okuttuktan sonra işlemi daha rahat bir şekilde tamamlayabiliriz. Böylelikle sevkiyat raporlarında oluşan hataları da gidermiş oluyoruz.",
+        "Sevkiyat ve iade kabul işlemi bittiği zaman, artık işlem süresinde okutulan kolilerin listesi, işlemi yapan arkadaşın adı soyadı, işlem tarihinin olduğu bir A4 çıkmış olacak. Bu kağıdı kuryeye imzalatmak için bir kısımda kağıdın alt kısmına eklenmiştir.",
+        "Sevkiyat ve iade işlemi sonrası çıkan bu kağıt otomatik olarak çıkmaktadır; fakat herhangi bir nedenle tekrar çıkarılmak istendiğinde de, Tamamlandı ekranlarına, yeniden çıkarmak için bir bölüm eklenmiştir.",
+        "Sipariş Detayı ekranlarında artık Siparişin Hazırlanma Süresi ve Siparişin Müşteriye Ulaşma Süresi olarak iki adet süre vardır. Bu bilgilerden ilki – Siparişin Hazırlanma Süresi – sipariş oluşturulduktan, sevk edilene kadar geçen zamanı, ikinci bilgi – Siparişin Müşteriye Ulaşma Süresi – siparişin oluşturulduktan, müşteriye teslim edildiği zamana kadar geçen süreyi yansıtmaktadır."
+      ]
+    }
+  ],
+  "upcoming": [
+    "Maestro üzerinden Ticket açabilme özelliği (Ticketların takibi için Jira'ya gidilmesi gerekecektir)",
+    "Mal Kabulü yapılan ürünlerin adreslenmeden stok bilgilerinin güncellenmesi ve satılabilmesi"
+  ]
+}

@@ -1,0 +1,20 @@
+name: 'Get Variables'
+description: 'Action to provide specific variables'
+inputs:
+  artifactName: 
+    description: 'Name of the artifact'
+    required: true
+    default: 'Maestro.WebApp'
+
+outputs:
+  ARTIFACT_NAME:
+    description: 'Artifact name'
+    value: ${{ inputs.artifactName }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Output Variables
+      run: |
+        echo "ARTIFACT_NAME=${{ inputs.artifactName }}" >> $GITHUB_ENV
+      shell: bash

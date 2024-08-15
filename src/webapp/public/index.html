@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Disabled to view session replays on YandexMetrica. Check: https://github.com/styled-components/styled-components/issues/2038
+    -->
+    <script>
+      SC_DISABLE_SPEEDY = true;
+    </script>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="theme-color" content="#000000" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script defer src="%PUBLIC_URL%/assets/js/xlsx.full.min.js"></script>
+    <link rel="preload" as="style" href="%PUBLIC_URL%/assets/css/fontawesome.css" onload="this.rel='stylesheet'" />
+    <link rel="preload" as="style" href="%PUBLIC_URL%/assets/css/typekit.css" onload="this.rel='stylesheet'" />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&amp;subset=latin-ext"
+      onload="this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="%PUBLIC_URL%/assets/css/react-datepicker.min.css"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/fontawesome.css" />
+      <link rel="stylesheet" href="%PUBLIC_URL%/assets/css/typekit.css" />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap&amp;subset=latin-ext"
+      />
+    </noscript>
+    <script type="text/javascript">
+      (function(c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function() {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'hgl3w7liax');
+    </script>
+    <% if (isReleaseProduction){ %>
+    <script type="text/javascript">
+      (function(m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function() {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym');
+
+      ym(75863383, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <% } %>
+    <title>Maestro</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

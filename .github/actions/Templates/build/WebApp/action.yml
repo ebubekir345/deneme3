@@ -1,0 +1,44 @@
+name: 'WebApp Build Action'
+description: 'An action that builds a web application, runs tests, and publishes an artifact.'
+
+inputs:
+  pipelineType:
+    description: 'Type of pipeline (release, test, verify).'
+    required: true
+    default: 'release'
+  artifactName:
+    description: 'Name of the artifact to publish.'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Install Dependencies
+      run: npm install --legacy-peer-deps
+      working-directory: src/webapp
+      shell: bash
+
+    - name: Run Tests
+      run: npm run test
+      working-directory: ./src/webapp
+      shell: bash
+
+    - name: Build Application
+      run: env REACT_APP_ENV=production npm run build --cleanDependencies=true
+      working-directory: ./src/webapp
+      shell: bash
+
+    - name: Delete *.map Files
+      run: rm -f ./src/webapp/build/static/**/*.map
+      shell: bash
+
+    - name: Archive Files to a .zip
+      run: |
+        zip -r ${{ github.workspace }}/Maestro.WebApp.Artifact.$(date +%s).zip ./src/webapp/build
+      shell: bash
+
+    - name: Publish Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: ${{ inputs.artifactName }}
+        path: ${{ github.workspace }}/Maestro.WebApp.Artifact.$(date +%s).zip

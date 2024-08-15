@@ -1,0 +1,2 @@
+export const CHANGE_LOCALE = 'CHANGE_LOCALE';
+export type CHANGE_LOCALE = typeof CHANGE_LOCALE;
